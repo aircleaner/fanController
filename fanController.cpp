@@ -12,17 +12,13 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// For temperature
-// Data wire is plugged into pin 2 on the Arduino
-#define ONE_WIRE_BUS_PIN 2
+#include "pins.h"
+
 // Setup a oneWire instance to communicate with any OneWire devices (not just
 // Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS_PIN);
 // Pass our oneWire reference to Dallas Temperature.
 DallasTemperature sensors(&oneWire);
-
-// For FAN
-#define FAN_CONTROL_PIN 3
 
 void setupFan()
 {
